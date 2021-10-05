@@ -1,5 +1,22 @@
 # Alchemy Bootstrap Template
 
+## Magic 8 ball
+
+### What HTML Elements do I need? 
+* text area for the question - static 
+* button - static 
+* p element that will hold the answer - dynamic
+
+### What state do I need? 
+* answer
+* randomIndex (kind of...)
+
+### what events am I listening for? What happens when those events are fired? 
+* button click 
+    * generate a random index 
+    * get the value of the answer
+    * display the answer in the p element on the page 
+
 ## Making a plan
 
 (bolded steps are mandatory, unbolded are for more advanced projects)

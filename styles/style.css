@@ -13,8 +13,33 @@ div {
     align-items: center;
 }
 
+/* #user-input {
+    padding: 20px;
+} */
 
 #user-output {
     color: blanchedalmond;
     font-size: 1.5em;
+    background-color: #5C4033;
 }
+
+#submit-button {
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: lightgoldenrodyellow; 
+    transform: scale(1.1);
+}
+
+footer {
+    position: absolute; 
+    bottom: 0; 
+}
+
+/* add pointer to button
+add hover to button
+add separate button to play background music?  */

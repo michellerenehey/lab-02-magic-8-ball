@@ -2,6 +2,7 @@
 const userInput = document.getElementById('user-input'); 
 const submitButton = document.getElementById('submit-button'); 
 const userOutput = document.getElementById('user-output'); 
+const audio = document.getElementById('audio');
 // const pageOne = document.getElementById('page-one'); 
 // const pageTwo = document.getElementById('page-two'); 
 
@@ -19,8 +20,13 @@ let randomAnswer = answers[randomIndex];
 
 // add event listener
 submitButton.addEventListener('click', () => {
-    userInput.value = '';
-    userOutput.textContent = randomAnswer;
-    randomIndex = getRandomNumber(answers.length);
-    randomAnswer = answers[randomIndex]; 
+    if (userInput.value === ''){
+        alert('Uhoh, please type your question!');
+    } else {
+        audio.play(); 
+        userInput.value = '';
+        userOutput.textContent = randomAnswer;
+        randomIndex = getRandomNumber(answers.length);
+        randomAnswer = answers[randomIndex]; 
+    }
 });

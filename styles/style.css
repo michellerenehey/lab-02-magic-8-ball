@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('../assets/etsy-8-ball.png');
+    font-family: 'Quicksand', sans-serif;
+    color: white;
 }
 
 div {
@@ -12,5 +15,6 @@ div {
 
 
 #user-output {
-    color: blue;
+    color: blanchedalmond;
+    font-size: 1.5em;
 }

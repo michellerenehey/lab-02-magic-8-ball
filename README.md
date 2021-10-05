@@ -13,9 +13,9 @@
 
 ### what events am I listening for? What happens when those events are fired? 
 * button click 
-    * generate a random index 
-    * get the value of the answer
-    * display the answer in the p element on the page 
+    * generate a random index number
+    * use that random index number to access the element in the array (get the value of the answer)
+    * set the text content of the answer element to that value display the answer in the p element on the page 
 
 ## Making a plan
 

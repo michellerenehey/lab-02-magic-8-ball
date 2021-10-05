@@ -1,24 +1,26 @@
-const colors = ['red', 'white', 'blue'];
+// grab DOM elements from HTML
+const userInput = document.getElementById('user-input'); 
+const submitButton = document.getElementById('submit-button'); 
+const userOutput = document.getElementById('user-output'); 
+// const pageOne = document.getElementById('page-one'); 
+// const pageTwo = document.getElementById('page-two'); 
 
-// // // to generate a random color from the array
-// // // generate a random number between 0 and 2
-// // // in other words generate a random index 
-// // const randomIndex = Math.floor(Math.random() * colors.length); 
-// // console.log(colors[randomIndex]); 
 
-//turn this into a function
+// set state: create function 
+import { answers } from './answers.js'; 
+
 const getRandomNumber = (max) => {
     return Math.floor(Math.random() * max); 
 }; 
 
-const randomIndex = getRandomNumber(colors.length); 
-console.log(colors[randomIndex]);
+let randomIndex = getRandomNumber(answers.length); 
+let randomAnswer = answers[randomIndex]; 
 
-import { answers } from './answers.js'; 
 
-const randomAnswer = getRandomNumber(answers.length); 
-console.log(answers[randomAnswer]); 
-
-// // in the HTML, set a <p> tag with id of answer.
-// const answer = document.getElementById('answer); 
-// answer.textContent = answers[randomAnswer]; 
+// add event listener
+submitButton.addEventListener('click', () => {
+    userInput.value = '';
+    userOutput.textContent = randomAnswer;
+    randomIndex = getRandomNumber(answers.length);
+    randomAnswer = answers[randomIndex]; 
+});
